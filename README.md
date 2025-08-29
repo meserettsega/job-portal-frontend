@@ -22,7 +22,6 @@ This project provides a professional interface for job seekers to create CVs and
 - **React.js**
 - **React Router**
 - **CSS Modules** (custom styling)
-- **Node.js (for development server)**
 
 ---
 
