@@ -1,0 +1,26 @@
+/* Wrapper */
+.dashboard-layout {
+  display: flex;
+  height: 100vh; /* full page */
+  width: 100%;
+  background: #f9fafb; /* light background */
+}
+
+/* Sidebar (nav) */
+.dashboard-layout > :first-child {
+  width: 250px;          /* fixed sidebar */
+  min-width: 220px;
+  background: #1e293b;   /* dark blue/gray */
+  color: #fff;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+/* Main dashboard area */
+.dashboard-layout > :last-child {
+  flex: 1;               /* take remaining space */
+  padding: 20px;
+  background: #fff;
+  overflow-y: auto;
+}

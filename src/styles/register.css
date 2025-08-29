@@ -1,0 +1,166 @@
+.lkbody {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../image/benefitting-people-03.png'); /* Replace with your actual image path */
+    background-size: contain; /* Contain the image within the background */
+    background-repeat: no-repeat;
+    background-position: left center; /* Position the image on the left side */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for the body */
+  }
+  
+  .lkbody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start the blur effect from the middle */
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.89), rgba(0, 123, 255, 0.514)); /* White to blue gradient */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    z-index: 1; /* Ensure the gradient is behind the form */
+    animation: gradientSlide 3s infinite alternate; /* Animation for sliding gradient */
+  }
+  
+  .lkbody::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%; /* Adjust the width of the green gradient as needed */
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 255, 123, 0.4), rgba(0, 255, 123, 0)); /* Green gradient fading out to transparent */
+    z-index: 1; /* Ensure the green gradient is also behind the form */
+    animation: gradientSlide 3s infinite alternate-reverse; /* Animation for sliding gradient */
+  }
+  
+  .auth-container {
+    z-index: 2; /* Ensure the form is on top of the gradients */
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    margin-left: auto; /* Move the container to the right side */
+    margin-right: 140px;
+    background-color: rgba(231, 222, 222, 0.137); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.301);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: formPopUp 1.2s ease-in-out; /* Animation for popping up the form */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+  }
+  
+  .input-group label {
+    flex: 1;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .auth-button,
+  .toggle-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for button background */
+  }
+  
+  .auth-button:hover,
+  .toggle-button:hover {
+    background-color: #45a049;
+  }
+  
+  .toggle-button {
+    background-color: #008CBA;
+    margin-top: 10px;
+  }
+  
+  .toggle-button:hover {
+    background-color: #007bb5;
+  }
+  
+  @media (max-width: 768px) {
+    .auth-container {
+      padding: 15px;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .input-group label,
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+    }
+  }
+  
+  /* Keyframes for Animations */
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes gradientSlide {
+    0% { transform: translateX(-10px); }
+    100% { transform: translateX(10px); }
+  }
+  
+  @keyframes formPopUp {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  

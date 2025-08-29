@@ -1,0 +1,17 @@
+/* Animate.css minimal subset for fadeIn, fadeInDown, fadeInUp, fadeInLeft, fadeInRight, pulse, zoomIn, fadeInUp, delay classes */
+.animate__animated {animation-duration:1s;animation-fill-mode:both;}
+.animate__fadeInDown {animation-name:fadeInDown;}
+.animate__fadeInUp {animation-name:fadeInUp;}
+.animate__fadeInLeft {animation-name:fadeInLeft;}
+.animate__fadeInRight {animation-name:fadeInRight;}
+.animate__pulse {animation-name:pulse;animation-duration:1s;}
+.animate__zoomIn {animation-name:zoomIn;}
+.animate__delay-1s {animation-delay:1s;}
+.animate__delay-2s {animation-delay:2s;}
+
+@keyframes fadeInDown{0%{opacity:0;transform:translate3d(0,-100%,0);}100%{opacity:1;transform:none;}}
+@keyframes fadeInUp{0%{opacity:0;transform:translate3d(0,100%,0);}100%{opacity:1;transform:none;}}
+@keyframes fadeInLeft{0%{opacity:0;transform:translate3d(-100%,0,0);}100%{opacity:1;transform:none;}}
+@keyframes fadeInRight{0%{opacity:0;transform:translate3d(100%,0,0);}100%{opacity:1;transform:none;}}
+@keyframes pulse{0%{transform:scale3d(1,1,1);}50%{transform:scale3d(1.05,1.05,1.05);}100%{transform:scale3d(1,1,1);}}
+@keyframes zoomIn{0%{opacity:0;transform:scale3d(0.3,0.3,0.3);}50%{opacity:1;}100%{transform:scale3d(1,1,1);}}

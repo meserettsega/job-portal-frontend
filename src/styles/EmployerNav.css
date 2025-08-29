@@ -1,0 +1,124 @@
+/* Sidebar container */
+.employer-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background: linear-gradient(to bottom, #0d253f, #1d72b8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+/* Brand */
+.employer-sidebar__brand {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 1px;
+}
+
+.employer-sidebar__brand .highlight {
+  color: #facc15; /* yellow accent */
+}
+
+/* Menu */
+.employer-sidebar__menu {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+}
+
+/* Links */
+.employer-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.employer-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(6px);
+}
+
+.employer-link.active {
+  background: #facc15;
+  color: #0d253f;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons */
+.employer-icon {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.employer-sidebar__footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .employer-sidebar {
+    width: 220px;
+    transform: translateX(-100%); /* hide sidebar by default */
+  }
+
+  .employer-sidebar.open {
+    transform: translateX(0); /* show sidebar when toggled */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .employer-sidebar {
+    width: 180px;
+  }
+
+  .employer-link {
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+  }
+}
+/* Hamburger toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: #1d72b8;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+}
+
+/* Show button on mobile only */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+}
